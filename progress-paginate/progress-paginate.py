@@ -8,23 +8,24 @@
 
 from scribus import *
 
+# The page thumbnails color, must be set in the document's color palette
 barColor = "Black"
+# The bar height. Document's unit
 barHeight = 100
-pageNumber = pageCount()
 pageWidth = getPageSize()[0]
 pageHeight = getPageSize()[1]
 pageWidthMargin = getPageMargins()[1] + getPageMargins()[2]
 pageBottomLimit = pageHeight - getPageMargins()[0] - barHeight
 pageInnerWidth = pageWidth - pageWidthMargin
-barWidthUnit = pageInnerWidth / pageNumber
 xPos = getPageMargins()[1]
 yPos = pageBottomLimit
+pageNumber = pageCount()
+barWidthUnit = pageInnerWidth / pageNumber
 currentPage = 1
 
 while (currentPage <= pageNumber):
     barWidth = barWidthUnit * currentPage
     gotoPage(currentPage)
-    print barWidth
     rect = createRect(xPos, yPos, barWidth, barHeight)
     setFillColor(barColor, rect)
     currentPage += 1

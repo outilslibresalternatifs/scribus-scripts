@@ -10,7 +10,7 @@ By default, the pagination bars will be drawn inside the pages’s margins at th
 
 # How to use it
 
-1. Clone or download this repository.
+1. Clone or download this repository
 2. Open a new or existing document in Scribus, go to `Script > Execute Script…` and select `progress-paginate.py`
 3. Enjoy the power of printed progress bars!
 
