@@ -15,3 +15,7 @@ A python script for Scribus to create image grid. The script creates a new Docum
 # License
 
 [GNU General Public License](https://gnu.org/licenses/gpl.html)
+
+# TO DO
+- Create a better interface
+- Fork the script to create one which import image grid in existed document
