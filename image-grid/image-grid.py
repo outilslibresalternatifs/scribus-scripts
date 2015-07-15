@@ -14,7 +14,7 @@ numColStr2 = 'Combien de colonnes? '
 numLinStr1 = 'Nombre de lignes'
 numLinStr2 = 'Combien de lignes ?'
 gapStr1 = 'Largeur des marges'
-gapStr2 = 'Quelle est la lageur des marges (en mm)?' 
+gapStr2 = 'Quelle est la largeur des marges (en mm)?' 
 
 """ Default Value in Dialog (can be changed) """
 defaultDocWidth = '210'
