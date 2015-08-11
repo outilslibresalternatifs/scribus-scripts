@@ -4,17 +4,17 @@
 Create a new doc. Ask user size of the doc, number of columns, lines and margins.
 """
 
-""" Locale string (can be changed)"""
-docWidthStr1 = 'Largeur du Document'
-docWidthStr2 = 'Entrez ici la largeur de votre document (en mm)'
-docHeightStr1 = 'Hauteur du Document'
-docHeightStr2 = 'Entrez ici la hauteur de votre document (en mm)'
-numColStr1 = 'Nombre de colonnes'
-numColStr2 = 'Combien de colonnes? '
-numLinStr1 = 'Nombre de lignes'
-numLinStr2 = 'Combien de lignes ?'
-gapStr1 = 'Largeur des marges'
-gapStr2 = 'Quelle est la largeur des marges (en mm)?' 
+""" Locale string (can be changed)""" 
+docWidthStr1 = 'Paper Width'
+docWidthStr2 = 'Enter the width of your document (in mm)'
+docHeightStr1 = 'Document Height'
+docHeightStr2 = 'Enter the height of your document (in mm)'
+numColStr1 = 'Number of columns'
+numColStr2 = 'Enter the number of columns of your grid? '
+numLinStr1 = 'Number of Lines'
+numLinStr2 = 'Enter the number of lines of your grid?'
+gapStr1 = 'Margin Width'
+gapStr2 = 'Enter the margins width of your grid (in mm)?'
 
 """ Default Value in Dialog (can be changed) """
 defaultDocWidth = '210'
@@ -41,8 +41,8 @@ numColumns = int(scribus.valueDialog(numColStr1, numColStr2, defaultNumColumns))
 numRows = int(scribus.valueDialog(numLinStr1, numLinStr2, defaultNumRows))
 gap = float(scribus.valueDialog(gapStr1, gapStr2, defaultGap))
 nbrimages = numColumns*numRows
-imagedir = scribus.fileDialog('Selectionnez un dossier d\'images','Dossiers',isdir=True)
-imagetype = scribus.valueDialog('Types d\'images','Entrez les types d\'images:\n j=jpg,p=png,t=tif,g=gif,P=pdf\n "jptgP" selects all','jptgP')
+imagedir = scribus.fileDialog('Select your pictures folder','Folders',isdir=True)
+imagetype = scribus.valueDialog('Pictures types','Enter pictures types: j=jpg,p=png,t=tif,g=gif,P=pdf\n "jptgP" selects all','jptgP')
 for t in imagetype[0:]:
     filetype.append(dicttype[t])
     filetype.append(Dicttype[t])
